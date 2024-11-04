@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+        <div class="flex">
+        
+            <form action="" method="get" class="flex flex-col justify-center w-6/12  mt-10 p-10">
+                <h1 class="text-lg">This Is Read Form</h1>
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded" name="readfolder"
+                    placeholder="Enter Folder Name">
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded" name="readfile"
+                    placeholder="Enter File Name">
+                <input type="submit" value="Submit" class="border-solid border-2 border-black cursor-pointer">
+            </form>
+        
+            <div class="w-6/12 border-solid border-2 border-black mb-1">
+                <!-- ALL THE READIN  -->
+               <%= if(data){
+                
+            }%>
+        
+            </div>
+        </div>
+</body>
+<script>
+    // Clear the URL query string after a short delay
+    setTimeout(() => {
+        const url = new URL(window.location.href);
+        url.search = ''; // Remove all query parameters
+        window.history.replaceState(null, '', url);
+    }, 2000); // Set delay to 2 seconds (or as needed)
+</script>
+</html>

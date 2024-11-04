@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD PROJECT WIHT FS MODULE</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <!-- Create form -->
+    <div class="flex justify-center items-center m-5">
+        <h1 class="text-lg font-bold italic">This Is CRUD Project Using FS Module And EJS</h1>
+    </div>
+
+    <div class="border-dashed border-2 border-black flex flex-col w-screen w-full	justify-center">
+
+        <div class="flex">
+            <form action="" method="get" class="flex flex-col justify-center  mt-10 p-10">
+                <h1 class="text-lg">This Is Create Form</h1>
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="createfolder" placeholder="Enter Folder Name">
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="createfile" placeholder="Enter File Name">
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="addfiledata" placeholder="Enter Some Data">
+                <input type="submit" class="border-solid border-2 border-black cursor-pointer" value="Submit">
+            </form>
+
+
+            <form action="" method="get" class="flex flex-col justify-center  mt-10 p-10">
+                <h1 class="text-lg">This Is Update Form</h1>
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="updatefile" placeholder="Enter File Name">
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="appenddata" placeholder="Enter Some Data">
+                <input type="submit" value="Submit" class="border-solid border-2 border-black cursor-pointer">
+            </form>
+
+            <form action="" method="get" class="flex flex-col justify-center  mt-10 p-10">
+                <h1 class="text-lg">This Is Delete Form</h1>
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="deletefolder" placeholder="Enter Folder Name">
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="deletefile" placeholder="Enter File Name">
+                <input type="submit" value="Submit" class="border-solid border-2 border-black cursor-pointer">
+            </form>
+
+        </div>
+
+        <div class="flex">
+
+            <form action="" method="get" class="flex flex-col justify-center w-6/12  mt-10 p-10">
+                <h1 class="text-lg">This Is Read Form</h1>
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="readfolder" placeholder="Enter Folder Name">
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="readfile" placeholder="Enter File Name">
+                <input type="submit" value="Submit" class="border-solid border-2 border-black cursor-pointer">
+            </form>
+
+            <div class="w-6/12 border-solid border-2 border-black mb-1">
+                <!-- ALL THE READIN  -->
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+<!-- ejs1.ejs -->
+<script>
+    // Clear the URL query string after a short delay
+    setTimeout(() => {
+        const url = new URL(window.location.href);
+        url.search = ''; // Remove all query parameters
+        window.history.replaceState(null, '', url);
+    }, 2000); // Set delay to 2 seconds (or as needed)
+</script>
+
+</html>

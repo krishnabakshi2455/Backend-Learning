@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="border-dashed border-2 border-black flex flex-col w-screen w-full	justify-center">
+
+        <div class="flex">
+            <form action="" method="get" class="flex flex-col justify-center  mt-10 p-10">
+                <h1 class="text-lg">This Is Edit Form</h1>
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="editfile" placeholder="Enter File Name">
+
+                <input type="text" class="border-solid border-2 border-black cursor-pointer p-1 m-2 rounded"
+                    name="newnamefile" placeholder="Enter New Name">
+
+                <input type="submit" class="border-solid border-2 border-black cursor-pointer" value="Submit">
+            </form>
+
+
+        </div>
+
+
+
+
+    </div>
+</body>
+<script>
+    // Clear the URL query string after a short delay
+    setTimeout(() => {
+        const url = new URL(window.location.href);
+        url.search = ''; // Remove all query parameters
+        window.history.replaceState(null, '', url);
+    }, 2000); // Set delay to 2 seconds (or as needed)
+</script>
+</html>
